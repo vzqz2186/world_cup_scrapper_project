@@ -1,6 +1,8 @@
-# 2018 FIFA World Cup Data Scrapper Project
+# FIFA World Cup Data Scrapper Project
 
-This program scraps online tables and data related to the rosters, teams, fixtures, and main stats from the FIFA World Cup organized in Russia for 2018. The program follows the following procedure:
+This program scraps online tables and data related to the rosters, teams, fixtures, and main stats from the FIFA World Cup. This is an ongoing project that I'm doing ahead of the 2022 World Cup hosted in Qatar in November. For the moment, it only contains data from the 2018 World Cup hosted in Russia. Future versions will contain data from Brazil 2014, South Africa 2010, Germany 2006, and Korea/Japan 2002 as well.
+
+The program follows the following procedure:
 
     1. Access the html code for the websites to scrap using the BeautifulSoup libraries.
     2. Scrap different data from tables and other places from the html code to fill lists to be used
