@@ -21,4 +21,4 @@ This program scraps online tables and data related to the rosters, teams, fixtur
     5. Scrap match results compiled by Fox Sports.
     6. Save all scrapped dataframes to csv files.
 
-To do: Scrap player stats like goals, yellow and red cards, and saves, and add them to the players dataframe.
+To do: Scrap player stats (goals, assists, yellow and red cards, saves) and add them to the players dataframe.
