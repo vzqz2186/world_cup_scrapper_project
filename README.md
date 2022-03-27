@@ -20,5 +20,15 @@ This program scraps online tables and data related to the rosters, teams, fixtur
     4. Scrap Group data from the same webpage as Step 3, detailing the different groups and the teams that conform make them up.
     5. Scrap match results compiled by Fox Sports.
     6. Save all scrapped dataframes to csv files.
+    
+After scrapping the data, SQL is used to clean the obtained tables. The changes are the following:
 
-To do: Scrap player stats (goals, assists, yellow and red cards, saves) and add them to the players dataframe.
+    1. Remove an unwanted row from the 'Groups' table, since the table headers were also scrapped as data when they were not
+       supposed to be.
+    2. Calculate the players' age at the start of the tournament (June 14, 2018) and create a new column to store that data.
+    3. Separate the 'captain' label from certain players' names and create a column detailing which players are team captains
+       and which ones are not.
+    4. Replace the abbreviations in the 'Player_position' field with the full names of the positions.
+
+__To do:__
+- Scrap player stats (goals, assists, yellow and red cards, saves) and add them to the players dataframe.
