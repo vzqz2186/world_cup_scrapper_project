@@ -1,6 +1,6 @@
 # FIFA World Cup Data Scrapper Project
 
-This program scraps online tables and data related to the rosters, teams, fixtures, and main stats from the FIFA World Cup. This is an ongoing project that I'm doing ahead of the 2022 World Cup hosted in Qatar in November. For the moment, it only contains data from the 2018 World Cup hosted in Russia. Future versions will contain data from Brazil 2014, South Africa 2010, Germany 2006, and Korea/Japan 2002 as well.
+This program scraps online tables and data related to the rosters, teams, and fixtures from the FIFA World Cup. This is an ongoing project that I'm working on ahead of the 2022 World Cup hosted in Qatar in November. At this time, the Python script pulls data for participating players, tournament group, and fixtures for the World Cups hosted between 2002 and 2018. All data is scrapped from the tournament's respective Wikipedia entries. Since the HTML is already very standardized, it allows for all functions to be reused, making small tweaks to them for particular ocations.
 
 The program follows the following procedure:
 
@@ -18,21 +18,16 @@ The program follows the following procedure:
         h. Match home and away sides
         i. Match groups and stages.
 
-    3. Scrap rosters data from the 2018 World Cup squads entry in Wikipedia.
-    4. Scrap Group data from the same webpage as Step 3, detailing the different groups and the teams that
-       conform make them up.
-    5. Scrap match results compiled by Fox Sports.
-    6. Save all scrapped dataframes to csv files.
+    3. Save all scrapped dataframes to csv files.
     
 After scrapping the data, SQL is used to clean the obtained tables. The changes are the following:
 
-    1. Remove an unwanted row from the 'Groups' table, since the table headers were also scrapped as data
-       when they were not supposed to be.
-    2. Calculate the players' age at the start of the tournament (June 14, 2018) and create a new column
+    1. Calculate the players' age at the start of the tournament (June 14, 2018) and create a new column
        to store that data.
-    3. Separate the 'captain' label from certain players' names and create a column detailing which players
+    2. Separate the 'captain' label from certain players' names and create a column detailing which players
        are team captains and which ones are not.
-    4. Replace the abbreviations in the 'Player_position' field with the full names of the positions.
+    3. Replace the abbreviations in the 'Player_position' field with the full names of the positions.
 
 __To do:__
-- Scrap player stats (goals, assists, yellow and red cards, saves) and add them to the players dataframe.
+- Scrap data for match location and date.
+- Scrap penalty kick scores.
